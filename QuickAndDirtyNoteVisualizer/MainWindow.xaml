@@ -1,0 +1,2142 @@
+﻿<Window x:Class="QuickAndDirtyNoteVisualizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuickAndDirtyNoteVisualizer"
+        mc:Ignorable="d"
+        Title="Notes and frets"
+        Height="700"
+        Width="650"
+        Background="LightSlateGray"
+        MinWidth="650"
+        MinHeight="700">
+
+    <Grid
+       Margin="5"
+       Background="White">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!-- TEXTBLOCK "Frets" title -->
+        <TextBlock
+           Text="Frets"
+           FontFamily="Consolas"
+           FontSize="20"
+           Grid.ColumnSpan="14"
+           Background="Beige"
+           Padding="10 0 0 0"
+           VerticalAlignment="Center">
+        </TextBlock>
+
+        <!-- STRING NAMES -->
+        <TextBlock
+           Text="e"
+           Grid.Row="1"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0 0 0 "
+           VerticalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock
+           Text="B"
+           Grid.Row="2"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0 0 0 "
+           VerticalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock
+           Text="G"
+           Grid.Row="3"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0 0 0 "
+           VerticalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock
+           Text="D"
+           Grid.Row="4"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0 0 0 "
+           VerticalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock
+           Text="A"
+           Grid.Row="5"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0 0 0 "
+           VerticalAlignment="Center">
+        </TextBlock>
+
+        <TextBlock
+           Text="E"
+           Grid.Row="6"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0 0 0 "
+           VerticalAlignment="Center">
+        </TextBlock>
+
+        <!-- RECTANGLE "Nut visualization" -->
+        <Rectangle
+            Grid.Row="1"
+            Grid.Column="1"
+            Height="240"
+            Width="3"
+            Grid.ColumnSpan="2"
+            Grid.RowSpan="6"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- **************************************** -->
+        <!-- FRETS e STRING -->
+
+        <!-- RECTANGLE "string visualization" -->
+        <Rectangle
+            Grid.Row="1"
+            Grid.Column="1"
+            Height="3"
+            Grid.ColumnSpan="13"
+            Fill="Black">
+
+        </Rectangle>
+
+        <!-- BUTTON "0" fret -->
+        <Button
+           Content="0"
+           x:Name="Fret_e_0"
+           Grid.Row="1"
+           Grid.Column="1"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "1" fret -->
+        <Button
+           Content="1"
+           x:Name="Fret_e_1"
+           Grid.Row="1"
+           Grid.Column="2"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "2" fret -->
+        <Button
+           Content="2"
+           x:Name="Fret_e_2" 
+           Grid.Row="1"
+           Grid.Column="3"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "3" fret -->
+        <Button
+           Content="3"
+           x:Name="Fret_e_3" 
+           Grid.Row="1"
+           Grid.Column="4"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "4" fret -->
+        <Button
+           Content="4"
+           x:Name="Fret_e_4" 
+           Grid.Row="1"
+           Grid.Column="5"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "5" fret -->
+        <Button
+           Content="5"
+           x:Name="Fret_e_5" 
+           Grid.Row="1"
+           Grid.Column="6"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "6" fret -->
+        <Button
+           Content="6"
+           x:Name="Fret_e_6" 
+           Grid.Row="1"
+           Grid.Column="7"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "7" fret -->
+        <Button
+           Content="7"
+           x:Name="Fret_e_7" 
+           Grid.Row="1"
+           Grid.Column="8"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "8" fret -->
+        <Button
+           Content="8"
+           x:Name="Fret_e_8" 
+           Grid.Row="1"
+           Grid.Column="9"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "9" fret -->
+        <Button
+           Content="9"
+           x:Name="Fret_e_9"
+           Grid.Row="1"
+           Grid.Column="10"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "10" fret -->
+        <Button
+           Content="10"
+           x:Name="Fret_e_10"
+           Grid.Row="1"
+           Grid.Column="11"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "11" fret -->
+        <Button
+           Content="11"
+           x:Name="Fret_e_11" 
+           Grid.Row="1"
+           Grid.Column="12"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "12" fret -->
+        <Button
+           Content="12"
+           x:Name="Fret_e_12" 
+           Grid.Row="1"
+           Grid.Column="13"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- **************************************** -->
+        <!-- FRETS B STRING -->
+
+        <!-- RECTANGLE "string visualization" -->
+        <Rectangle
+            Grid.Row="2"
+            Grid.Column="1"
+            Height="3"
+            Grid.ColumnSpan="13"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- BUTTON "0" fret -->
+        <Button
+           Content="0"
+           x:Name="Fret_B_0"
+           Grid.Row="2"
+           Grid.Column="1"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "1" fret -->
+        <Button
+           Content="1"
+           x:Name="Fret_B_1"
+           Grid.Row="2"
+           Grid.Column="2"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "2" fret -->
+        <Button
+           Content="2"
+           x:Name="Fret_B_2" 
+           Grid.Row="2"
+           Grid.Column="3"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "3" fret -->
+        <Button
+           Content="3"
+           x:Name="Fret_B_3" 
+           Grid.Row="2"
+           Grid.Column="4"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "4" fret -->
+        <Button
+           Content="4"
+           x:Name="Fret_B_4" 
+           Grid.Row="2"
+           Grid.Column="5"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "5" fret -->
+        <Button
+           Content="5"
+           x:Name="Fret_B_5" 
+           Grid.Row="2"
+           Grid.Column="6"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "6" fret -->
+        <Button
+           Content="6"
+           x:Name="Fret_B_6" 
+           Grid.Row="2"
+           Grid.Column="7"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "7" fret -->
+        <Button
+           Content="7"
+           x:Name="Fret_B_7" 
+           Grid.Row="2"
+           Grid.Column="8"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "8" fret -->
+        <Button
+           Content="8"
+           x:Name="Fret_B_8" 
+           Grid.Row="2"
+           Grid.Column="9"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "9" fret -->
+        <Button
+           Content="9"
+           x:Name="Fret_B_9"
+           Grid.Row="2"
+           Grid.Column="10"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "10" fret -->
+        <Button
+           Content="10"
+           x:Name="Fret_B_10"
+           Grid.Row="2"
+           Grid.Column="11"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "11" fret -->
+        <Button
+           Content="11"
+           x:Name="Fret_B_11" 
+           Grid.Row="2"
+           Grid.Column="12"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "12" fret -->
+        <Button
+           Content="12"
+           x:Name="Fret_B_12" 
+           Grid.Row="2"
+           Grid.Column="13"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- **************************************** -->
+        <!-- FRETS G STRING -->
+
+        <!-- RECTANGLE "string visualization" -->
+        <Rectangle
+            Grid.Row="3"
+            Grid.Column="1"
+            Height="3"
+            Grid.ColumnSpan="13"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- BUTTON "0" fret -->
+        <Button
+           Content="0"
+           x:Name="Fret_G_0"
+           Grid.Row="3"
+           Grid.Column="1"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "1" fret -->
+        <Button
+           Content="1"
+           x:Name="Fret_G_1"
+           Grid.Row="3"
+           Grid.Column="2"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "2" fret -->
+        <Button
+           Content="2"
+           x:Name="Fret_G_2" 
+           Grid.Row="3"
+           Grid.Column="3"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "3" fret -->
+        <Button
+           Content="3"
+           x:Name="Fret_G_3" 
+           Grid.Row="3"
+           Grid.Column="4"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "4" fret -->
+        <Button
+           Content="4"
+           x:Name="Fret_G_4" 
+           Grid.Row="3"
+           Grid.Column="5"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "5" fret -->
+        <Button
+           Content="5"
+           x:Name="Fret_G_5" 
+           Grid.Row="3"
+           Grid.Column="6"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "6" fret -->
+        <Button
+           Content="6"
+           x:Name="Fret_G_6" 
+           Grid.Row="3"
+           Grid.Column="7"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "7" fret -->
+        <Button
+           Content="7"
+           x:Name="Fret_G_7" 
+           Grid.Row="3"
+           Grid.Column="8"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "8" fret -->
+        <Button
+           Content="8"
+           x:Name="Fret_G_8" 
+           Grid.Row="3"
+           Grid.Column="9"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "9" fret -->
+        <Button
+           Content="9"
+           x:Name="Fret_G_9"
+           Grid.Row="3"
+           Grid.Column="10"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "10" fret -->
+        <Button
+           Content="10"
+           x:Name="Fret_G_10"
+           Grid.Row="3"
+           Grid.Column="11"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "11" fret -->
+        <Button
+           Content="11"
+           x:Name="Fret_G_11" 
+           Grid.Row="3"
+           Grid.Column="12"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "12" fret -->
+        <Button
+           Content="12"
+           x:Name="Fret_G_12" 
+           Grid.Row="3"
+           Grid.Column="13"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- **************************************** -->
+        <!-- FRETS D STRING -->
+
+        <!-- RECTANGLE "string visualization" -->
+        <Rectangle
+            Grid.Row="4"
+            Grid.Column="1"
+            Height="3"
+            Grid.ColumnSpan="13"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- BUTTON "0" fret -->
+        <Button
+           Content="0"
+           x:Name="Fret_D_0"
+           Grid.Row="4"
+           Grid.Column="1"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "1" fret -->
+        <Button
+           Content="1"
+           x:Name="Fret_D_1"
+           Grid.Row="4"
+           Grid.Column="2"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "2" fret -->
+        <Button
+           Content="2"
+           x:Name="Fret_D_2" 
+           Grid.Row="4"
+           Grid.Column="3"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "3" fret -->
+        <Button
+           Content="3"
+           x:Name="Fret_D_3" 
+           Grid.Row="4"
+           Grid.Column="4"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "4" fret -->
+        <Button
+           Content="4"
+           x:Name="Fret_D_4" 
+           Grid.Row="4"
+           Grid.Column="5"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "5" fret -->
+        <Button
+           Content="5"
+           x:Name="Fret_D_5" 
+           Grid.Row="4"
+           Grid.Column="6"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "6" fret -->
+        <Button
+           Content="6"
+           x:Name="Fret_D_6" 
+           Grid.Row="4"
+           Grid.Column="7"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "7" fret -->
+        <Button
+           Content="7"
+           x:Name="Fret_D_7" 
+           Grid.Row="4"
+           Grid.Column="8"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "8" fret -->
+        <Button
+           Content="8"
+           x:Name="Fret_D_8" 
+           Grid.Row="4"
+           Grid.Column="9"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "9" fret -->
+        <Button
+           Content="9"
+           x:Name="Fret_D_9"
+           Grid.Row="4"
+           Grid.Column="10"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "10" fret -->
+        <Button
+           Content="10"
+           x:Name="Fret_D_10"
+           Grid.Row="4"
+           Grid.Column="11"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "11" fret -->
+        <Button
+           Content="11"
+           x:Name="Fret_D_11" 
+           Grid.Row="4"
+           Grid.Column="12"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "12" fret -->
+        <Button
+           Content="12"
+           x:Name="Fret_D_12" 
+           Grid.Row="4"
+           Grid.Column="13"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- **************************************** -->
+        <!-- FRETS A STRING -->
+
+        <!-- RECTANGLE "string visualization" -->
+        <Rectangle
+            Grid.Row="5"
+            Grid.Column="1"
+            Height="3"
+            Grid.ColumnSpan="13"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- BUTTON "0" fret -->
+        <Button
+           Content="0"
+           x:Name="Fret_A_0"
+           Grid.Row="5"
+           Grid.Column="1"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "1" fret -->
+        <Button
+           Content="1"
+           x:Name="Fret_A_1"
+           Grid.Row="5"
+           Grid.Column="2"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "2" fret -->
+        <Button
+           Content="2"
+           x:Name="Fret_A_2" 
+           Grid.Row="5"
+           Grid.Column="3"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "3" fret -->
+        <Button
+           Content="3"
+           x:Name="Fret_A_3" 
+           Grid.Row="5"
+           Grid.Column="4"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "4" fret -->
+        <Button
+           Content="4"
+           x:Name="Fret_A_4" 
+           Grid.Row="5"
+           Grid.Column="5"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "5" fret -->
+        <Button
+           Content="5"
+           x:Name="Fret_A_5" 
+           Grid.Row="5"
+           Grid.Column="6"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "6" fret -->
+        <Button
+           Content="6"
+           x:Name="Fret_A_6" 
+           Grid.Row="5"
+           Grid.Column="7"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "7" fret -->
+        <Button
+           Content="7"
+           x:Name="Fret_A_7" 
+           Grid.Row="5"
+           Grid.Column="8"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "8" fret -->
+        <Button
+           Content="8"
+           x:Name="Fret_A_8" 
+           Grid.Row="5"
+           Grid.Column="9"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "9" fret -->
+        <Button
+           Content="9"
+           x:Name="Fret_A_9"
+           Grid.Row="5"
+           Grid.Column="10"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "10" fret -->
+        <Button
+           Content="10"
+           x:Name="Fret_A_10"
+           Grid.Row="5"
+           Grid.Column="11"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "11" fret -->
+        <Button
+           Content="11"
+           x:Name="Fret_A_11" 
+           Grid.Row="5"
+           Grid.Column="12"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "12" fret -->
+        <Button
+           Content="12"
+           x:Name="Fret_A_12" 
+           Grid.Row="5"
+           Grid.Column="13"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- **************************************** -->
+        <!-- FRETS E STRING -->
+
+        <!-- RECTANGLE "string visualization" -->
+        <Rectangle
+            Grid.Row="6"
+            Grid.Column="1"
+            Height="3"
+            Grid.ColumnSpan="13"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- BUTTON "0" fret -->
+        <Button
+           Content="0"
+           x:Name="Fret_E_0"
+           Grid.Row="6"
+           Grid.Column="1"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "1" fret -->
+        <Button
+           Content="1"
+           x:Name="Fret_E_1"
+           Grid.Row="6"
+           Grid.Column="2"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "2" fret -->
+        <Button
+           Content="2"
+           x:Name="Fret_E_2" 
+           Grid.Row="6"
+           Grid.Column="3"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "3" fret -->
+        <Button
+           Content="3"
+           x:Name="Fret_E_3" 
+           Grid.Row="6"
+           Grid.Column="4"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "4" fret -->
+        <Button
+           Content="4"
+           x:Name="Fret_E_4" 
+           Grid.Row="6"
+           Grid.Column="5"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "5" fret -->
+        <Button
+           Content="5"
+           x:Name="Fret_E_5" 
+           Grid.Row="6"
+           Grid.Column="6"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "6" fret -->
+        <Button
+           Content="6"
+           x:Name="Fret_E_6" 
+           Grid.Row="6"
+           Grid.Column="7"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "7" fret -->
+        <Button
+           Content="7"
+           x:Name="Fret_E_7" 
+           Grid.Row="6"
+           Grid.Column="8"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "8" fret -->
+        <Button
+           Content="8"
+           x:Name="Fret_E_8" 
+           Grid.Row="6"
+           Grid.Column="9"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "9" fret -->
+        <Button
+           Content="9"
+           x:Name="Fret_E_9"
+           Grid.Row="6"
+           Grid.Column="10"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "10" fret -->
+        <Button
+           Content="10"
+           x:Name="Fret_E_10"
+           Grid.Row="6"
+           Grid.Column="11"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "11" fret -->
+        <Button
+           Content="11"
+           x:Name="Fret_E_11" 
+           Grid.Row="6"
+           Grid.Column="12"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "12" fret -->
+        <Button
+           Content="12"
+           x:Name="Fret_E_12" 
+           Grid.Row="6"
+           Grid.Column="13"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- TEXTBLOCK "Notes" title -->
+        <TextBlock
+           Text="Notes"
+           Grid.Row="7"
+           FontFamily="Consolas"
+           FontSize="20"
+           Grid.ColumnSpan="14"
+           Background="Beige"
+           Padding="10 0 0 0"
+           VerticalAlignment="Center">
+        </TextBlock>
+
+        <!-- **************************************** -->
+        <!-- STAFF VISUALIZATION BARS -->
+        <!-- RECTANGLE "staff visualization" -->
+        <Rectangle
+            Grid.Row="8"
+            Grid.Column="14"
+            Height="3"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- RECTANGLE "staff visualization" -->
+        <Rectangle
+            Grid.Row="10"
+            Grid.Column="1"
+            Height="3"
+            Grid.ColumnSpan="13"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- RECTANGLE "staff visualization" -->
+        <Rectangle
+            Grid.Row="12"
+            Grid.Column="1"
+            Height="3"
+            Grid.ColumnSpan="13"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- RECTANGLE "staff visualization" -->
+        <Rectangle
+            Grid.Row="14"
+            Grid.Column="1"
+            Height="3"
+            Grid.ColumnSpan="13"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- RECTANGLE "staff visualization" -->
+        <Rectangle
+            Grid.Row="16"
+            Grid.Column="1"
+            Height="3"
+            Grid.ColumnSpan="13"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- RECTANGLE "staff visualization" -->
+        <Rectangle
+            Grid.Row="18"
+            Grid.Column="1"
+            Height="3"
+            Grid.ColumnSpan="13"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- RECTANGLE "staff visualization" -->
+        <Rectangle
+            Grid.Row="20"
+            Grid.Column="1"
+            Height="3"
+            Fill="Black">
+        </Rectangle>
+
+        <!-- TEXTBLOCK "Sharp" -->
+        <TextBlock
+           Text="Sharp"
+           Grid.Row="9"
+           Grid.Column="1"
+           FontFamily="Consolas"
+           FontSize="20"
+           Grid.ColumnSpan="4"
+           Background="Beige"
+           Padding="10 0 0 0"
+           VerticalAlignment="Bottom" Margin="0,0,46,1">
+        </TextBlock>
+
+        <!-- BUTTON "Sharp" note -->
+        <Button
+           Content="♯"
+           x:Name="Note_Sharp"
+           Grid.Row="9"
+           Grid.Column="3"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_Sharp_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- TEXTBLOCK "Flat" -->
+        <TextBlock
+           Text="Flat"
+           Grid.Row="8"
+           Grid.Column="1"
+           FontFamily="Consolas"
+           FontSize="20"
+           Grid.ColumnSpan="4"
+           Background="Beige"
+           Padding="10 0 0 0"
+           VerticalAlignment="Bottom" Margin="0,0,46,1">
+        </TextBlock>
+
+        <!-- BUTTON "Flat" note -->
+        <Button
+           Content="♭"
+           x:Name="Note_Flat"
+           Grid.Row="8"
+           Grid.Column="3"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_Flat_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- TEXTBLOCK "Normal" -->
+        <TextBlock
+           Text="Normal"
+           Grid.Row="8"
+           Grid.Column="5"
+           FontFamily="Consolas"
+           FontSize="20"
+           Grid.ColumnSpan="4"
+           Background="Beige"
+           Padding="10 0 0 0"
+           VerticalAlignment="Bottom" Margin="0,0,46,1">
+        </TextBlock>
+
+        <!-- BUTTON "Normal" note -->
+        <Button
+           Content="Na"
+           x:Name="Note_Normal"
+           Grid.Row="8"
+           Grid.Column="7"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_Normal_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- TEXTBLOCK "Reset" -->
+        <TextBlock
+           Text="Reset"
+           Grid.Row="9"
+           Grid.Column="5"
+           FontFamily="Consolas"
+           FontSize="20"
+           Grid.ColumnSpan="4"
+           Background="Beige"
+           Padding="10 0 0 0"
+           VerticalAlignment="Bottom" Margin="0,0,46,1">
+        </TextBlock>
+
+        <!-- BUTTON "Reset" note -->
+        <Button
+           Content="♻"
+           x:Name="Note_Reset"
+           Grid.Row="9"
+           Grid.Column="7"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_Reset_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "A octave higher" note -->
+        <Button
+           Content="A"
+           x:Name="Note_a"
+           Grid.Row="8"
+           Grid.Column="13"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_A_Octave_Higher_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "G octave higher" note -->
+        <Button
+           Content="G"
+           x:Name="Note_g"
+           Grid.Row="9"
+           Grid.Column="12"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_G_Octave_Higher_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "F octave higher" note -->
+        <Button
+           Content="F"
+           x:Name="Note_f"
+           Grid.Row="10"
+           Grid.Column="11"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_F_Octave_Higher_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "E octave higher" note -->
+        <Button
+           Content="E"
+           x:Name="Note_e"
+           Grid.Row="11"
+           Grid.Column="10"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_E_Octave_Higher_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "D octave higher" note -->
+        <Button
+           Content="D"
+           x:Name="Note_d"
+           Grid.Row="12"
+           Grid.Column="9"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_D_Octave_Higher_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "C octave higher" note -->
+        <Button
+           Content="C"
+           x:Name="Note_c"
+           Grid.Row="13"
+           Grid.Column="8"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_C_Octave_Higher_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "B" note -->
+        <Button
+           Content="B"
+           x:Name="Note_B"
+           Grid.Row="14"
+           Grid.Column="7"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_B_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "A" note -->
+        <Button
+           Content="A"
+           x:Name="Note_A"
+           Grid.Row="15"
+           Grid.Column="6"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_A_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "G" note -->
+        <Button
+           Content="G"
+           x:Name="Note_G"
+           Grid.Row="16"
+           Grid.Column="5"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_G_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "F" note -->
+        <Button
+           Content="F"
+           x:Name="Note_F"
+           Grid.Row="17"
+           Grid.Column="4"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_F_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "D" note -->
+        <Button
+           Content="E"
+           x:Name="Note_E"
+           Grid.Row="18"
+           Grid.Column="3"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_E_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "D" note -->
+        <Button
+           Content="D"
+           x:Name="Note_D"
+           Grid.Row="19"
+           Grid.Column="2"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_D_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!-- BUTTON "C" note -->
+        <Button
+           Content="C"
+           x:Name="Note_C"
+           Grid.Row="20"
+           Grid.Column="1"
+           FontFamily="Consolas"
+           FontSize="20"
+           Margin="10 0"
+           VerticalAlignment="Center"
+           BorderThickness="0" Click="Note_C_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
